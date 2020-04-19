@@ -1,12 +1,12 @@
 import chapter3.OperFunction;
 import chapter4.FunctionObj;
+import chapter4.Student;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.BiFunction;
-import java.util.function.Consumer;
-import java.util.function.Function;
+import java.util.function.*;
 
 public class Main {
 
@@ -37,7 +37,7 @@ public class Main {
 //        //解码
 //        System.out.println(new String(decoder.decode(encodedText),"UTF-8"));
 
-
+        /*jdk8新特性:Base64新编码类============================*/
 
 
         /*jdk8新特性:日期处理类============================*/
@@ -213,7 +213,69 @@ public class Main {
 //        list.forEach(obj-> System.out.println(obj));
         /*jdk8新特性:函数型接⼝BiFunction,消费型接⼝：有入参，无返回值============================*/
 
+
+
+        /*jdk8新特性:Supplier: 供给型接⼝口：⽆无⼊入参，有返回值============================*/
+
+//        Supplier<Student> supplier=()->{
+//            Student student=new Student();
+//            return student;
+//        };
+
+//        Supplier<Student> supplier = () -> {
+//            Student student=new Student();
+//            student.setName("朱竹青");
+//            return student;
+//        };
+//
+//
+//
+//
+//        Student student = supplier.get();
+//        System.out.println(student.getName());
+//
+//
+//        Student student1=newStudent();
+//        System.out.println(student1.getName());
+        /*jdk8新特性:Supplier: 供给型接⼝：⽆无⼊入参，有返回值============================*/
+
+
+        /*jdk8新特性:Predicate: 断⾔言型接⼝：有入参，有返回值，返回值类型确定是boolean============================*/
+
+        List<String> list=Arrays.asList("asdfsdfasf","sdfsfsdfsdf","dsfasdfsdfa","aeerr3423423","sdfdfsbbbb");
+        List<String> result=filter(list,obj->obj.startsWith("a"));
+        System.out.println(list);
+        System.out.println(result);
+
+        /*jdk8新特性:Predicate: 断⾔言型接⼝：有入参，有返回值，返回值类型确定是boolean============================*/
+
     }
+
+    /*jdk8新特性:Predicate: 断⾔言型接⼝：有入参，有返回值，返回值类型确定是boolean============================*/
+    public static List<String> filter(List<String> list, Predicate<String> predicate){
+        List<String> results=new ArrayList<>();
+        list.forEach(str->{
+         if (predicate.test(str)){
+             results.add(str);
+         }
+        });
+        return results;
+    }
+    /*jdk8新特性:Predicate: 断⾔言型接⼝口：有⼊入参，有返回值，返回值类型确定是boolean============================*/
+
+
+    /*jdk8新特性:Supplier: 供给型接⼝口：⽆无⼊入参，有返回值============================*/
+//    public static Student newStudent(){
+//        Supplier<Student> supplier=()->{
+//          Student student=new Student();
+//          student.setName("唐三");
+//          return student;
+//        };
+//        return supplier.get();
+//    }
+    /*jdk8新特性:Supplier: 供给型接⼝口：⽆无⼊入参，有返回值============================*/
+
+
 
     /*jdk8新特性:自定义函数接口============================*/
 //    public static Integer operator(Integer a, Integer b, OperFunction<Integer,Integer> of){
