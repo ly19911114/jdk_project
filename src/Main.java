@@ -242,25 +242,25 @@ public class Main {
 
         /*jdk8新特性:Predicate: 断⾔言型接⼝：有入参，有返回值，返回值类型确定是boolean============================*/
 
-        List<String> list=Arrays.asList("asdfsdfasf","sdfsfsdfsdf","dsfasdfsdfa","aeerr3423423","sdfdfsbbbb");
-        List<String> result=filter(list,obj->obj.startsWith("a"));
-        System.out.println(list);
-        System.out.println(result);
+//        List<String> list=Arrays.asList("asdfsdfasf","sdfsfsdfsdf","dsfasdfsdfa","aeerr3423423","sdfdfsbbbb");
+//        List<String> result=filter(list,obj->obj.startsWith("a"));
+//        System.out.println(list);
+//        System.out.println(result);
 
         /*jdk8新特性:Predicate: 断⾔言型接⼝：有入参，有返回值，返回值类型确定是boolean============================*/
 
     }
 
     /*jdk8新特性:Predicate: 断⾔言型接⼝：有入参，有返回值，返回值类型确定是boolean============================*/
-    public static List<String> filter(List<String> list, Predicate<String> predicate){
-        List<String> results=new ArrayList<>();
-        list.forEach(str->{
-         if (predicate.test(str)){
-             results.add(str);
-         }
-        });
-        return results;
-    }
+//    public static List<String> filter(List<String> list, Predicate<String> predicate){
+//        List<String> results=new ArrayList<>();
+//        list.forEach(str->{
+//         if (predicate.test(str)){
+//             results.add(str);
+//         }
+//        });
+//        return results;
+//    }
     /*jdk8新特性:Predicate: 断⾔言型接⼝口：有⼊入参，有返回值，返回值类型确定是boolean============================*/
 
 
