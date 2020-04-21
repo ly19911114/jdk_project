@@ -115,7 +115,7 @@ public class Main {
 
         /*jdk8新特性:Lambda表达式============================*/
 
-//        new Thread(new Runnable() {
+//       new Thread(new Runnable() {
 //            @Override
 //            public void run() {
 //                System.out.println("杭州博彦信息技术有限公司");
@@ -249,6 +249,28 @@ public class Main {
 
         /*jdk8新特性:Predicate: 断⾔言型接⼝：有入参，有返回值，返回值类型确定是boolean============================*/
 
+
+        /*jdk8新特性:JDK8之⽅方法与构造函数引⽤用双冒号============================*/
+//        //使用::双冒号来构造静态函数的引用
+//        Function<String,Integer> function=Integer::parseInt;
+//        System.out.println(function.apply("1111"));
+//
+//
+//        //使用::双冒号来构造非静态函数引用
+//        String content="欢迎加入博彦";
+//        Function<Integer,String> func=content::substring;
+//        String result=func.apply(2);
+//        System.out.println(result);
+//
+//        //使用::双冒号构造构造函数
+//        BiFunction<String,Integer,Student> biFunction=Student::new;
+//        Student student=biFunction.apply("万户侯",3);
+//        System.out.println(student);
+//
+//        sayHello(String::toUpperCase,"beijingzijietiaodong");
+        /*jdk8新特性:JDK8之⽅方法与构造函数引⽤用双冒号============================*/
+
+
     }
 
     /*jdk8新特性:Predicate: 断⾔言型接⼝：有入参，有返回值，返回值类型确定是boolean============================*/
@@ -298,10 +320,18 @@ public class Main {
     /*jdk8新特性:函数型接⼝BiFunction,传递两个参数，有返回值============================*/
 
 
-    /*jdk8新特性:函数型接⼝BiFunction,消费型接⼝：有入参，无返回值============================*/
+    /*jdk8新特性:Consumer消费型接⼝：有入参，无返回值============================*/
 //   public static void sendMessage(String msg, Consumer<String> consumer){
 //       consumer.accept(msg);
 //   }
-    /*jdk8新特性:函数型接⼝BiFunction,消费型接⼝：有入参，无返回值============================*/
+    /*jdk8新特性:Consumer消费型接⼝：有入参，无返回值============================*/
+
+    /*jdk8新特性:JDK8之⽅方法与构造函数引⽤用双冒号============================*/
+//    public static void sayHello(Function<String,String> function,String param){
+//        String result=function.apply(param);
+//        System.out.println(result);
+//    }
+    /*jdk8新特性:JDK8之⽅方法与构造函数引⽤用双冒号============================*/
+
 
 }
