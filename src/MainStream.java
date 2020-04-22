@@ -21,7 +21,7 @@ public class MainStream {
 //        System.out.println(result);
 
         /**
-         * 场景：map转换对象，如javaweb开发中集合⾥里里⾯面的DO对象转换为DTO对象
+         * 场景： map转换对象，如javaweb开发中集合⾥里里⾯面的DO对象转换为DTO对象
          */
 //        List<User> list=Arrays.asList(new User("娃哈哈1","123",77),new User("娃哈哈2","12345",97),
 //                new User("娃哈哈","1234",78));
