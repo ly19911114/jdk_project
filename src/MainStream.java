@@ -3,8 +3,11 @@ import chapter5.User;
 import chapter5.UserDTO;
 
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 /**
  * @author LiuYang
@@ -97,6 +100,54 @@ public class MainStream {
 //          User user1=user.get();
 //        System.out.println(user1.getAge());
         /*jdk8新特性:流stream⾥里里的max和min函数的使⽤用============================*/
+
+
+        /*jdk8新特性:并行流parallelStream的使用============================*/
+//        List<Integer> bunmbers = Arrays.asList(1, 2, 1, 2, 3, 4, 5, 6, 7, 7, 8, 8);
+//        bunmbers.parallelStream().forEach(System.out::println);
+//
+//
+//        for (int i=0;i<10;i++){
+//            List<Integer> list=new CopyOnWriteArrayList<>();
+//            IntStream.range(0,100).forEach(list::add);
+//            System.out.println(list.size());
+//        }
+        /*jdk8新特性:并行流parallelStream的使用============================*/
+
+
+
+        /*jdk8新特性:reduce操作,根据⼀一定的规则将Stream中的元素进⾏行行计算后返回⼀一个唯⼀一的值============================*/
+//        Optional<Integer> a=Stream.of(1,23,4,56).reduce((item1, item2)->item1+item2);
+//        System.out.println(a.get());
+
+
+//        //常用方法二:T reduce(T identity, BinaryOperator<T> accumulator);
+//        int value=Stream.of(1,2,3,4,5).reduce(100,(item1,item2)->item1+item2);
+//        System.out.println(value);
+        /*jdk8新特性:reduce操作,根据⼀一定的规则将Stream中的元素进⾏行行计算后返回⼀一个唯⼀一的值============================*/
+
+
+        /*jdk8新特性:foreach循环不不能修改包含外部的变量量的值
+不不能⽤用break或者return或者continue等关键词结束或者跳过循环============================*/
+
+
+        /*jdk8新特性:收集器collectors的使用============================*/
+//        List<String> list=Arrays.asList("111","222","22333333","111");
+//        TreeSet<String> treeSet=list.stream().collect(Collectors.toCollection(TreeSet::new));
+//        List<String> copyList=list.stream().collect(Collectors.toCollection(CopyOnWriteArrayList::new));
+//        System.out.println(copyList);
+//        System.out.println(treeSet);
+        /*jdk8新特性:收集器collectors的使用============================*/
+
+
+        /*jdk8新特性:joining的使用============================*/
+//        List<String> list=Arrays.asList("123","SpringCloud","SpringBoot");
+//        System.out.println(list.stream().collect(Collectors.joining()));
+//        System.out.println(list.stream().collect(Collectors.joining(";")));
+//        System.out.println(list.stream().collect(Collectors.joining(",","{","}")));
+        /*jdk8新特性:joining的使用============================*/
+
+
 
     }
 
