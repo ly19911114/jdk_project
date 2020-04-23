@@ -148,6 +148,57 @@ public class MainStream {
         /*jdk8新特性:joining的使用============================*/
 
 
+        /*jdk8新特性:收集器partitioningBy分组============================*/
+//        List<String> list=Arrays.asList("java","SpringCloud","CSS3","RocketMQ");
+//        Map<Boolean,List<String>> map=list.stream().collect(Collectors.partitioningBy(obj->obj.length()>4));
+//        System.out.println(map);
+        /*jdk8新特性:收集器partitioningBy分组============================*/
+
+
+        /*jdk8新特性:收集器器 group by分组============================*/
+//        //根据学⽣生所在的省份，进⾏行行分组
+//        List<Student> students = Arrays.asList(new Student("⼴广东", 23), new
+//                Student("⼴广东", 24), new Student("⼴广东", 23),new Student("北北京", 22), new
+//                Student("北北京", 20), new Student("北北京", 20),new Student("海海南", 25));
+//
+//        Map<String,List<Student> > map=students.stream().collect(Collectors.groupingBy((obj->obj.getName())));
+//        map.forEach((key,value)->{
+//            System.out.println("===========");
+//            System.out.println(key);
+//            value.stream().forEach(obj->{
+//                System.out.println(obj.getAge());
+//            });
+//        });
+        /*jdk8新特性:收集器器 group by分组============================*/
+
+
+        /*jdk8新特性:收集器器 group by进阶============================*/
+//        //需求：统计各个省份的⼈人数
+//        List<Student> students = Arrays.asList(new Student("⼴广东", 23), new
+//                Student("⼴广东", 24), new Student("⼴广东", 23),new Student("北北京", 22), new
+//                Student("北北京", 20), new Student("北北京", 20),new Student("海海南", 25));
+//
+//        Map<String,Long> map=students.stream().collect(Collectors.groupingBy(Student::getName,Collectors.counting()));
+//        map.forEach((key,value)->{
+//            System.out.println(key+"人数有"+value);
+//        });
+        /*jdk8新特性:收集器器 group by进阶============================*/
+
+
+        /*jdk8新特性:收集器器 summarizing集合统计============================*/
+//        List<Student> students = Arrays.asList(new Student("⼴广东", 23), new
+//                Student("⼴广东", 24), new Student("⼴广东", 23),new Student("北北京", 22), new
+//                Student("北北京", 20), new Student("北北京", 20),new Student("海海南", 25));
+//
+//        IntSummaryStatistics summaryStatistics=students.stream().collect(Collectors.summarizingInt(obj->obj.getAge()));
+//        System.out.println("平均值：" + summaryStatistics.getAverage());
+//        System.out.println("⼈人数：" + summaryStatistics.getCount());
+//        System.out.println("最⼤大值：" + summaryStatistics.getMax());
+//        System.out.println("最⼩小值：" + summaryStatistics.getMin());
+//        System.out.println("总和：" + summaryStatistics.getSum());
+        /*jdk8新特性:收集器器 summarizing集合统计============================*/
+
+
 
     }
 
